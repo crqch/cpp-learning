@@ -7,6 +7,7 @@ int maxnumber(int a, int b) { return (a >= b) * a + (b > a) * b; }
 
 string touppercase(string text) {
   for (int i = 0; i < text.length(); i++) {
+    // we do not want to modify non lowercase symbols
     if (text[i] >= 97 && text[i] <= 122) {
       text[i] = text[i] - 32;
     }
@@ -40,6 +41,24 @@ int main() {
 
   cout << a << " " << iseven(a) << endl;
   cout << maxnumber(410, 10) << endl;
+
+  int α, β;
+  // unassigned variables have really funky values
+  // -1549622880 -1482250844 in this instance
+  cout << α << " " << β << endl;
+  α = 5, β = 20;
+  cout << α << " " << β << endl;
+  // i wonder if it's because of name of the variable
+
+  int ψ;
+  cout << ψ << endl;
+  int ab, ac;
+  cout << ab << " " << ac << endl;
+
+  // now the previous values have changed, seems like it's based on the memory
+  // address
+
+  cout << &ab << " " << &ac << endl;
 
   char aLetter = 'a';
   cout << aLetter << endl;
