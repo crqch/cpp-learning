@@ -60,6 +60,14 @@ int main() {
 
   cout << &ab << " " << &ac << endl;
 
+  // they might be, no clue how to solve that
+
+  // fun fact, i've written those digits from the memory 😃
+  const double π = 3.14159265358979323846264;
+  cout << "π is roughly " << π << endl;
+  // okay, sadly the double is being trimmed, probably some double limits for
+  // the decimal place
+
   char aLetter = 'a';
   cout << aLetter << endl;
   aLetter += 1;
